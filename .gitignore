@@ -1,0 +1,6 @@
+# exclude secrets
+.env
+# exclude binaries
+aurora_exporter
+electricitymaps_exporter
+s3_exporter

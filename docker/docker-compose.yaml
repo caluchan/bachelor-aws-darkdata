@@ -1,0 +1,22 @@
+services:
+  
+  s3_exporter:
+    image: s3_exporter
+    volumes:
+      - "./.aws/credentials:/root/.aws/credentials"
+    ports:
+      - 8080:8080
+
+  aurora_exporter:
+    image: aurora_exporter
+    volumes:
+      - "./.env:/app/.env"
+    ports:
+      - 8081:8081
+
+  electricitymaps_exporter:
+    image: electricitymaps_exporter
+    volumes:
+      - "./.env:/app/.env"
+    ports:
+      - 8082:8082
